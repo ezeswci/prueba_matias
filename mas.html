@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mi Presion</title>
+     <script src="cordova.js" type="text/javascript"></script>
+    <script src="js/lib/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="js/plugins/Calendar.js" type="text/javascript"></script>
+    <script src="js/mas.js" type="text/javascript"></script>
+    <script src="js/datosamail.js" type="text/javascript"></script>
+
+
+    <link href="css/estilos.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+<div id="resumen_oculto"></div>
+    <div class="header">
+        <div class="triangulo_inf"></div>
+        <div class="titulo">INFORMACI&Oacute;N<!--img class="i" src="img/I.jpg" onclick="abrirVentana(2);" width="25" height="25" /--></div>
+    </div>
+<div id="cartel2" class="cartel">
+        <div onClick="cerrarVentana();" id="x">
+            <img src="img/x.jpg" width="35" height="35" />
+        </div>
+        <div class="terminos">
+        El usuario debe leer detenidamente estos t&eacute;rminos y condiciones antes de usar la aplicaci&oacute;n Mi Presi&oacute;n. La instalaci&oacute;n, uso o copia de esta aplicaci&oacute;n indica la confirmaci&oacute;n de que el usuario ha le&iacute;do, esta de acuerdo y acepta estos t&eacute;rminos y condiciones. Si el usuario no acepta estos t&eacute;rminos y condiciones, no debe instalar ni utilizar esta aplicaci&oacute;n.</br>Mi Presi&oacute;n es un programa de software (aplicaci&oacute;n) dentro del tel&eacute;fono celular, tableta o para su uso web, destinado a registrar los valores de presi&oacute;n arterial de un usuario. Los datos deber&aacute;n ser cargados manualmente. El funcionamiento del programa depende de: 1. la correcta descarga del software en el caso de dispositivos m&oacute;viles y de la adecuada conexi&oacute;n a internet en la versi&oacute;n web; 2. El correcto ingreso de la informaci&oacute;n por parte del usuario; 3. Del correcto funcionamiento del dispositivo y el sistema operativo donde se est&aacute; empleando, incluyendo el encendido, bater&iacute;a disponible y cualquier otro factor relacionado con el adecuado funcionamiento del celular, tableta o computadora. El usuario es el &uacute;nico responsable de la informaci&oacute;n cargada as&iacute; como del correcto funcionamiento del programa, siendo esta responsabilidad intransferible. Para dispositivos m&oacute;viles, el programa funciona y puede ser utilizado solamente con los sistemas operativos iOS 4.3 a 8 y Android 4.3. El uso del software no implica en ning&uacute;n caso el reemplazo o modificaci&oacute;n de las indicaciones brindadas por el m&eacute;dico tratante. El desarrollador se reserva el derecho en cualquier momento y sin previo aviso, de discontinuar el programa Mi Presi&oacute;n, como  as&iacute; tambi&eacute;n de discontinuar su actualizaci&oacute;n. Ni el desarrollador ni los patrocinadores, incluyendo directores, funcionarios y empleados, ser&aacute;n responsables en ning&uacute;n caso por cualquier tipo de p&eacute;rdida, lesi&oacute;n, daños, incluyendo pero no limit&aacute;ndose a daños personales, accesorios, especiales, indirectos o emergentes incluyendo sin ning&uacute;n tipo de limites, los daños por lucro cesante, por el deterioro o p&eacute;rdida de datos, la incapacidad de transmitir o recibir datos o informaci&oacute;n, por la interrupci&oacute;n o mal funcionamiento del software o bien por cualquier tipo de consecuencia del programa, resultantes o relacionados con el mal uso del programa, asi como de cualquier software o aplicaci&oacute;n de terceros que se utilicen junto con Mi Presi&oacute;n, como quiera que haya sido causado e independientemente de la teor&iacute;a de la responsabilidad civil (contractual o extracontractual u otros). El usuario no puede vender, ceder o de cualquier forma disponer del programa Mi presi&oacute;n.</br>Todos los datos e informaci&oacute;n  que se ingresen y carguen en Mi Presi&oacute;n por el usuario, se encontrar&aacute;n almacenados en el dispositivo del usuario. Solo la versi&oacute;n web para ser usada en las computadoras, ofrecer&aacute; al usuario ingresar su correo electr&oacute;nico y solo en el caso de que el usuario solicite una contraseña de acceso a Mi Presi&oacute;n, el desarrollador le otorgar&aacute; una transitroria que el usuario deber&aacute; modificar. En ning&uacute;n caso la informaci&oacute;n podr&aacute; ser empleada, por el desarrollador o el patrocinador.</div></div>
+    <div id="cartel">
+        <div id="x">
+            <img src="img/x.jpg" width="35" height="35" />
+        </div>
+        “Mi Presi&oacute;n” desea acceder a tu calendario.
+        <div class="botones">
+            <div onclick="cerrarVentana();" class="boton">NO PERMITIR</div>
+            <div id="permitir" class="boton">OK</div>
+        </div>
+    </div>
+    <div id="fondo_negro" onclick="cerrarVentana();"></div>
+    <p>&nbsp;</p>
+    <div class="cuerpo_mas">
+        <a href="condiciones_uso.html">
+            <div class="item"> <div class="txt">Condiciones de uso</div>
+                <img src="img/flecha.jpg" width="23" height="38" />
+            </div>
+        </a>
+        <a href="como_usar.html">
+            <div class="item"><div class="txt">Explicacion de como usar</div>
+                <img src="img/flecha.jpg" width="23" height="38" />
+            </div>
+        </a>
+        <div class="item" id="amigo"><div class="txt">Recomendar a un amigo</div>
+            <img src="img/flecha.jpg" width="23" height="38" />
+        </div><a href="ventajas.html">
+        <div class="item"><div class="txt">Recomendaciones de como y cuando usar </div><img src="img/flecha.jpg" width="23" height="38" /></div></a>
+  </div>
+    <div class="footer">
+        <a href="alerta.html">
+            <img src="img/datos.jpg" width="135" height="135" />
+        </a>
+        <a href="contactos2.html">
+            <img src="img/estadisticas.jpg" width="135" height="135" />
+        </a>
+        <a href="llamada.html">
+            <img src="img/historial.jpg" width="135" height="135" />
+        </a>
+        <a href="mas.html">
+            <img src="img/mas_hover.jpg" width="135" height="135" />
+        </a>
+    </div>
+</body>
+
+</html>

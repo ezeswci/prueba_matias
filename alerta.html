@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Mi Alerta</title>
+    <script src="cordova.js" type="text/javascript"></script>
+    <script src="js/lib/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="js/datos.js" type="text/javascript"></script>
+    <script src="js/panico.js" type="text/javascript"></script>
+    <script src="js/gps.js" type="text/javascript"></script>
+	<script src="js/recordAudio.js" type="text/javascript"></script>
+    <script src="js/enviar_mensajes.js" type="text/javascript"></script>
+    <script src="js/chequeoConexion.js" type="text/javascript"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="css/estilos.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <div class="header_publi"><div class="wrapper"><img onclick="clickBanner();" id="banneron" src="img/banner.jpg" width="100%" /></div></div>
+    <div class="header_carga">
+        <div class="triangulo_inf2"></div>
+        <div class="titulo">MI ALERTA <!--<button onClick="startAudioRec()">Start</button>&nbsp;&nbsp;&nbsp;
+<button onClick="stopAudioRec()">Stop</button>-->
+        </div>
+    </div>
+
+    <div id="cartel" class="cartel" style="max-width:300px;">
+        <div onclick="cerrarTodo();" id="x">
+            <img src="img/x.jpg" width="35" height="35" />
+        </div>
+        <div class="titulo">INGRESO CLAVE</div>
+        <div class="content">
+        <p>Esta acción requiere que ingrese su clave</p>
+ <p><strong>CLAVE: </strong><input type="number" id="passing" maxlength="4" autocomplete="off" ></p></div>
+ <div class="botones">
+ 			<div onclick="cerrarTodo();" class="boton">CANCELAR</div>
+            <div onclick="validarPass();" class="boton der">INGRESAR</div> 
+        </div>
+        </div>
+
+
+    <div id="fondo_negro" onclick="cerrarTodo();"></div>
+
+    <div class="cuerpo2">
+        <!--        CALENDARIO / RELOJ      -->
+ <div class="main">
+    <div class="boton_panico"><img id="img_panic" onclick="apretoPanico(this);" src="img/boton_empezar.jpg" width="100%" /> </div></div>
+    </div>
+    <div class="footer">
+        <a href="alerta.html">
+            <img src="img/datos_hover.jpg" width="135" height="135" />
+        </a>
+        <a href="contactos2.html">
+            <img src="img/estadisticas.jpg" width="135" height="135" />
+        </a>
+        <a href="llamada.html">
+            <img src="img/historial.jpg" width="135" height="135" />
+        </a>
+        <a href="mas.html">
+            <img src="img/mas.jpg" width="135" height="135" />
+        </a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+Base de datos
+
+Tablas:
+
+-Pass: 
+	pass_id
+	pass_true
+	pass_false
+
+-Call:
+	call_id
+	call_num
+	call_active
+
+-Contact:
+	con_id
+	con_tipo
+	con_nombre
+	con_destino
+	

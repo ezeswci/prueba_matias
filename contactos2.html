@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Mi Alerta</title>
+     <script src="cordova.js" type="text/javascript"></script>
+    <script src="js/lib/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="js/agenda.js" type="text/javascript"></script>
+    <script src="js/importarDeAgenda.js" type="text/javascript"></script>
+    <link href="css/estilos.css" rel="stylesheet" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+<div id="resumen_oculto"></div>
+    <div class="header">
+        <div class="triangulo_inf"></div>
+        <div class="titulo">
+            <img class="historial_logo" onclick="agregarContactos();" src="img/historial_logo.jpg" width="30" height="30"-->MIS CONTACTOS
+            <a href="contactos_info.html">
+                <img class="i" src="img/I.jpg" width="25" height="25" />
+            </a>
+        </div>
+    </div>
+
+
+
+    <div class="historial">
+        <!--    WRAPPER DEL HISTORIAL    -->
+        <div class="historial_item"><div class="texto"><div class="fecha">Alerta</div><div class="borrar">&nbsp;</div><strong>Policia: </strong>*911</div></div>
+        <!-- Fin del Wrapper -->
+        
+    </div>
+
+    <div class="footer">
+        <a href="alerta.html">
+            <img src="img/datos.jpg" width="135" height="135" />
+        </a>
+        <a href="contactos.html">
+            <img src="img/estadisticas_hover.jpg" width="135" height="135" />
+        </a>
+        <a href="llamada.html">
+            <img src="img/historial.jpg" width="135" height="135" />
+        </a>
+        <a href="mas.html">
+            <img src="img/mas.jpg" width="135" height="135" />
+        </a>
+    </div>
+    <!-- Los mensajes -->
+ <div id="cartel" class="cartel">
+        <div onclick="cerrarTodo();" id="x">
+            <img src="img/x.jpg" width="35" height="35" />
+        </div>
+        <div class="titulo">INGRESO DE CONTACTOS</div>
+        <div class="content">
+        <p>Eliga si desea cargar los contactaos de manera manual o si desea importarlos desde su agenda. Estos contactos son quienes van a recibir el mensaje de alerta. El mensaje lo pueden recibir mediante SMS o Mediante un mail.</p>
+        <p>Elija el tipo de carga: </p>
+        </div>
+        <div class="botones">
+         	<div onclick="agregarManual();" class="boton">MANUAL</div>
+            <div onclick="agregarDesdeLaAgenda();" class="boton der">AGENDA</div>
+        </div>
+ </div>
+ <div id="cartel2" class="cartel">
+        
+ </div>
+ <div id="cartel3" class="cartel" style="visibility:visible;">
+ <div onclick="window.location='alerta.html';" id="x"><img src="img/x.jpg" width="35" height="35" /></div>
+ <div class="titulo">INGRESO CLAVE</div>
+        <div class="content">
+        <p>Esta acción requiere que ingrese su clave</p>
+ <p><strong>CLAVE: </strong><input type="number" id="passing" maxlength="4" autocomplete="off" ></p></div><div class="botones"><div onclick="window.location='alerta.html';" class="boton">CANCELAR</div><div onclick="validarPass();" class="boton der">INGRESAR</div></div>
+ </div>
+ <div id="cartel4" class="cartel" style="z-index:99;">
+        <div class="titulo">AVISO</div>
+        <br />
+        	<div class="content">
+        		<div id="contAlert"></div>
+        	</div>
+         <br />
+        	<div class="botones">
+            	<div onclick="cerrarAviso();" class="boton_unico">ACEPTAR</div>
+        	</div>
+ </div>
+
+	<div id="fondo_negro3" onclick="window.location='alerta.html';"></div>
+    <div id="fondo_negro" onclick="cerrarTodo();"></div>
+    <div id="fondo_negro2" onclick="cerrarAviso();" style="z-index:98;"></div>
+</body>
+
+</html>
